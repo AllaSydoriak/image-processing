@@ -21,7 +21,7 @@
    <children>
       <AnchorPane prefHeight="416.0" prefWidth="602.0">
          <children>
-            <Button fx:id="chooseImg" layoutX="60.0" layoutY="58.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="163.0" text="Обрати зображення">
+            <Button fx:id="chooseImg" layoutX="60.0" layoutY="58.0" mnemonicParsing="false" onAction="#chooseImgAction" prefHeight="34.0" prefWidth="163.0" text="Обрати зображення">
                <font>
                   <Font size="14.0" />
                </font>
@@ -32,8 +32,8 @@
                </font>
             </Label>
             <TextField fx:id="k" layoutX="396.0" layoutY="63.0" prefHeight="25.0" prefWidth="52.0" />
-            <ImageView fitHeight="221.0" fitWidth="278.0" layoutX="23.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fitHeight="221.0" fitWidth="278.0" layoutX="301.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="sourseImg" fitHeight="221.0" fitWidth="278.0" layoutX="23.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="newImg" fitHeight="221.0" fitWidth="278.0" layoutX="301.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </AnchorPane>
    </children>
