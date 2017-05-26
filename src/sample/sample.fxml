@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -8,34 +10,100 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<GridPane alignment="center" hgap="10" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="550.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
    <rowConstraints>
-      <RowConstraints />
+      <RowConstraints minHeight="-Infinity" />
    </rowConstraints>
    <children>
       <AnchorPane prefHeight="416.0" prefWidth="602.0">
          <children>
-            <Button fx:id="chooseImg" layoutX="48.0" layoutY="260.0" mnemonicParsing="false" onAction="#chooseImgAction" prefHeight="34.0" prefWidth="153.0" text="Обрати зображення">
+            <Button fx:id="chooseImg" layoutX="35.0" layoutY="233.0" mnemonicParsing="false" onAction="#chooseImgAction" prefHeight="34.0" prefWidth="153.0" text="Обрати зображення">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <ImageView fx:id="sourseImg" fitHeight="221.0" fitWidth="278.0" layoutX="24.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="newImg" fitHeight="221.0" fitWidth="278.0" layoutX="292.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="redImg" layoutX="219.0" layoutY="261.0" mnemonicParsing="false" onAction="#redImgAction" prefHeight="34.0" prefWidth="48.0" text="Red">
+            <ImageView fx:id="sourseImg" fitHeight="183.0" fitWidth="256.0" layoutX="23.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="newImg" fitHeight="193.0" fitWidth="250.0" layoutX="297.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="redImg" layoutX="198.0" layoutY="233.0" mnemonicParsing="false" onAction="#redImgAction" prefHeight="34.0" prefWidth="48.0" text="Red">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="greenImg" layoutX="285.0" layoutY="261.0" mnemonicParsing="false" onAction="#greenImgAction" prefHeight="34.0" prefWidth="59.0" text="Green">
+            <Button fx:id="greenImg" layoutX="264.0" layoutY="233.0" mnemonicParsing="false" onAction="#greenImgAction" prefHeight="34.0" prefWidth="59.0" text="Green">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="blueImg" layoutX="359.0" layoutY="261.0" mnemonicParsing="false" onAction="#blueImgAction" prefHeight="34.0" prefWidth="48.0" text="Blue">
+            <Button fx:id="blueImg" layoutX="341.0" layoutY="233.0" mnemonicParsing="false" onAction="#blueImgAction" prefHeight="34.0" prefWidth="48.0" text="Blue">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="401.0" layoutY="233.0" mnemonicParsing="false" onAction="#reset" prefHeight="34.0" prefWidth="118.0" text="Скинути фільтр">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="42.0" layoutY="278.0" prefHeight="55.0" prefWidth="107.0" text="Діапазон складової R" textAlignment="CENTER" underline="true" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="221.0" layoutY="285.0" prefHeight="40.0" prefWidth="118.0" text="Діапазон складової G" textAlignment="CENTER" underline="true" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="407.0" layoutY="285.0" prefHeight="40.0" prefWidth="107.0" text="Діапазон складової B" textAlignment="CENTER" underline="true" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="55.0" layoutY="341.0" text="min">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="54.0" layoutY="376.0" text="max">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="243.0" layoutY="341.0" text="min">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="242.0" layoutY="374.0" text="max">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="rMin" layoutX="82.0" layoutY="339.0" prefHeight="25.0" prefWidth="59.0" />
+            <TextField fx:id="rMax" layoutX="82.0" layoutY="373.0" prefHeight="25.0" prefWidth="59.0" />
+            <TextField fx:id="gMin" layoutX="269.0" layoutY="339.0" prefHeight="25.0" prefWidth="59.0" />
+            <TextField fx:id="gMax" layoutX="269.0" layoutY="372.0" prefHeight="25.0" prefWidth="59.0" />
+            <TextField fx:id="bMin" layoutX="449.0" layoutY="339.0" prefHeight="25.0" prefWidth="59.0" />
+            <TextField fx:id="bMax" layoutX="449.0" layoutY="372.0" prefHeight="25.0" prefWidth="59.0" />
+            <Label layoutX="423.0" layoutY="341.0" text="min">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="422.0" layoutY="374.0" text="max">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="143.0" layoutY="430.0" mnemonicParsing="false" onAction="#newColors" text="Перерахувати">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="270.0" layoutY="430.0" mnemonicParsing="false" onAction="#save" prefHeight="30.0" prefWidth="107.0" text="Зберегти">
                <font>
                   <Font size="14.0" />
                </font>
