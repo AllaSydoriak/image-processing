@@ -1,2 +1,2 @@
 # image-processing
-Software for inputting and converting BMP graphic files
+Software for inputting and edditing BMP graphic files
